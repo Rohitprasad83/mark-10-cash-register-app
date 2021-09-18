@@ -38,14 +38,14 @@ button {
 }
 
 th {
-  border: 2px solid blue;
+  border: 1px solid blue;
   padding: 0px;
   width: 12.5%;
   font-size: 12px;
   font-weight: normal;
 }
 td {
-  border: 2px solid blue;
+  border: 1px solid blue;
   width: 12.5%;
 }
 
