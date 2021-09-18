@@ -38,7 +38,7 @@ check.addEventListener("click", function(){
         {
             if(cash.value < 0)
                 showErrorMessage("Cash Amount cannot be negative!");
-            else if(bill.value > 0)
+            else if(cash.value > 0)
                  showErrorMessage("Give more cash!");
             else 
                 showErrorMessage("Cash Amount entered is not a valid number!");
