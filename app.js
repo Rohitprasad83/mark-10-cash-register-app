@@ -79,7 +79,11 @@ function hideMessage()
 
 function showErrorMessage(errorMessage){
     message.style.display = "block";
+    for(var i = 0; i < notes.length; i++)
+    {
+        noOfNotes[i].innerText = "";
 
+    }
     message.innerText = errorMessage;
 }
 
