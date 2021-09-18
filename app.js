@@ -1,13 +1,28 @@
 var bill = document.querySelector("#bill");
 var cash = document.querySelector("#cash");
 var check = document.querySelector("#check");
+var next = document.querySelector("#next");
+var imp = document.querySelector("#imp");
+
+
 var message = document.querySelector("#message");
 var noOfNotes = document.querySelectorAll(".no-of-notes");
 
 var notes = [2000, 500, 100, 20, 10, 5, 1];
 
+function hideWelcome() {
+imp.style.display = "none";
+    
+}
+hideWelcome();
 
+next.addEventListener("click", function(){
+    if(bill.value){
+        imp.style.display = "block";
+        next.style.display = "none";
+    }
 
+})
 
 check.addEventListener("click", function(){
     hideMessage();
@@ -21,12 +36,22 @@ check.addEventListener("click", function(){
         }
         else
         {
-            showErrorMessage("Give more cash!");
+            if(cash.value < 0)
+                showErrorMessage("Cash Amount cannot be negative!");
+            else if(bill.value > 0)
+                 showErrorMessage("Give more cash!");
+            else 
+                showErrorMessage("Cash Amount entered is not a valid number!");
         }
     }
     else
     {
-        showErrorMessage("Invalid Input");
+        if(bill.value < 0)
+            showErrorMessage("Bill Amount cannot be negative!");
+        else if(bill.value == 0)
+            showErrorMessage("Bill Amount cannot be zero!");
+        else 
+            showErrorMessage("Bill Amount entered is not a valid number!");
     }
 })
 
