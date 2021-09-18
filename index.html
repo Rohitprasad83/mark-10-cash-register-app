@@ -9,45 +9,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+
+    
     <h1>Cash Register Manager</h1>
     <p>Enter the bill amount and cash given by the customer</p>
-    <div>
-        <h3>Enter the bill amount</h3>
-        <input>
+
+
+    <label for="bill">Bill amount:</label>
+    <input id="bill" class="input-amt"type="text" />
+
+
+    <label for="cash">Cash amount:</label>
+    <input id="cash" class="input-amt" type="text" />
+    
+
+    <button id="check">Check</button>
+    <p id="message"></p>
+    <table class="change-table">
+        <caption>
+            Return Change
+        </caption>
+        <tr>
+            <th>No of Notes</th>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+            <td class="no-of-notes"></td>
+
+        </tr>
+        <tr>
+            <th>Note</th>
+            <td>2000</td>
+            <td>500</td>
+            <td>100</td>
+            <td>20</td>
+            <td>10</td>
+            <td>5</td>
+            <td>1</td>
+        </tr>
+    </table>
     </div>
+</div>
 
-    <div>
-        <h3>Enter the Cash given</h3>
-        <input>
-    </div>
-
-    <button type="">Check</button>
-
-    <div id="message"></div>
-
-    <div id="return">Return Change</div>
-
-    <div id="notes">
-        <span>No of Notes</span>
-        <span>0</span>
-        <span>0</span>
-        <span>0</span>
-        <span>0</span>
-        <span>0</span>
-        <span>0</span>
-        <span>0</span>
-        
-    </div>
-    <!-- <div id="note">
-        <span>Note</span>
-        <span>2000</span>
-        <span>500</span>
-        <span>100</span>
-        <span>20</span>
-        <span>10</span>
-        <span>5</span>
-        <span>1</span>
-    </div> -->
-
+    <script src="app.js" type="text/javascript"></script>
 </body>
 </html>
