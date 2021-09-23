@@ -21,7 +21,6 @@ next.addEventListener("click", function(){
         imp.style.display = "block";
         next.style.display = "none";
     }
-
 })
 
 check.addEventListener("click", function(){
