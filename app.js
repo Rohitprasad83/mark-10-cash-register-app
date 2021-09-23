@@ -17,7 +17,7 @@ imp.style.display = "none";
 hideWelcome();
 
 next.addEventListener("click", function(){
-    if(bill.value){
+    if(bill.value > 0){
         imp.style.display = "block";
         next.style.display = "none";
     }
@@ -28,30 +28,37 @@ check.addEventListener("click", function(){
     hideMessage();
     if(bill.value > 0)
     {
-        if(Number(cash.value) >= Number(bill.value))
+        if(Number(cash.value) > Number(bill.value))
         {
             var returnAmount = cash.value - bill.value;
             console.log(returnAmount);
             calculateChange(returnAmount);
         }
+        else if(Number(cash.value) === Number(bill.value))
+        {
+            showMessage("Cash Amount and Bill Amount is same, No change required!")
+        }
         else
         {
             if(cash.value < 0)
-                showErrorMessage("Cash Amount cannot be negative!");
+                showMessage("Cash Amount cannot be negative!");
             else if(cash.value > 0)
-                 showErrorMessage("Give more cash!");
-            else 
-                showErrorMessage("Cash Amount entered is not a valid number!");
+                 showMessage("Give more cash!");
+            else if(cash.value == 0)
+                showMessage("Please enter cash amount greater than zero!"); 
+            else
+                showMessage("Cash Amount entered is not a valid number!");
+
         }
     }
     else
     {
         if(bill.value < 0)
-            showErrorMessage("Bill Amount cannot be negative!");
+            showMessage("Bill Amount cannot be negative!");
         else if(bill.value == 0)
-            showErrorMessage("Bill Amount cannot be zero!");
+            showMessage("Bill Amount cannot be zero!");
         else 
-            showErrorMessage("Bill Amount entered is not a valid number!");
+            showMessage("Bill Amount entered is not a valid number!");
     }
 })
 
@@ -77,7 +84,7 @@ function hideMessage()
 }
 
 
-function showErrorMessage(errorMessage){
+function showMessage(errorMessage){
     message.style.display = "block";
     for(var i = 0; i < notes.length; i++)
     {
