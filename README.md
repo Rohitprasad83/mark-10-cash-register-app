@@ -7,7 +7,7 @@ This app considers the denomination of notes to be 1000, 500, 100, 20, 10 ,5 ,1.
 
 ## **Interface of the app**
 
-<img src="./images/interface.png" alt="interface" width="500" height="300" />
+<img src="./images/interface.png" alt="interface" width="700" height="400" />
 
 ---
 ## **How to use the app**
