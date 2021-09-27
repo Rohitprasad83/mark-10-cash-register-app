@@ -81,3 +81,32 @@ table {
   font-size: 20px;
   font-weight: bold;
 }
+
+.footer {
+  bottom: 0;
+  margin-top: 200px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer .footer-header {
+  font-weight: bold;
+  font-size: large;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
+
+.list-item-inline {
+  display: inline;
+  padding: 0rem 0.3rem;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.footer .link {
+  color: blue;
+}
